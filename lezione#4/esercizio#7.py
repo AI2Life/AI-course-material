@@ -10,19 +10,3 @@ tup = [("tube", 5), ("ps:/", 2), ("ch?v=", 8), (".you", 4), ("dQw4w9WgXcQ", 9),
        (".co", 6), ("/www", 3), ("htt", 1), ("m/wat", 7)]
 
 
-lst = len(tup)
-for i in range(0, lst):
-    for j in range(0, lst - i - 1):
-        if (tup[j][1] > tup[j + 1][1]):
-            temp = tup[j]
-            tup[j] = tup[j + 1]
-            tup[j + 1] = temp
-
-
-final = ""
-for i in tup:
-    final += i[0]
-
-print(final)
-
-

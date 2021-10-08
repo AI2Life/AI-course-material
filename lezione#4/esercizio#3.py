@@ -8,9 +8,3 @@ Deve stampare:
 """
 
 x = [7,9,20,13,15,16,21,14,51,2,12,67]
-
-for i in range(max(x)):
-    if i in x:
-        pass
-    else:
-        print(i)
