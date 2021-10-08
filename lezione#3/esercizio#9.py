@@ -14,9 +14,3 @@ OUTPUT:
 	4 -> pari
 	5 -> dispari
 """
-
-n1 = int(input())
-n2 = int(input())
-
-for i in range(n1, n2):
-    print(i, "pari" if i % 2 == 0 else "dispari")

@@ -13,22 +13,6 @@ Ad una festa di scoiattoli ci deve essere almeno un sigaro a scoiattolo e non ci
 sigari a scoiattolo (altrimenti c'è troppa puzza). Se il giorno è festivo non c'è un limite ai sigari.
 """
 
-n_scoiattoli = int(input())
-n_sigri = int(input())
-giorno_feriale = bool(input())
-
-
-if giorno_feriale:
-    if (n_sigri >= n_scoiattoli) and (n_sigri * 3) >= n_scoiattoli:
-        print("Festa!!!")
-    else:
-        print("Cippppp, festa annullataaaaaaa!")
-else:
-    if (n_sigri >= n_scoiattoli):
-        print("Festa!!!")
-    else:
-        print("Cippppp, festa annullataaaaaaa!")
-
 
 
 
