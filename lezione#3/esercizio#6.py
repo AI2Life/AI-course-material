@@ -10,10 +10,3 @@ eccetto i primi due che sono, per definizione 0 e 1.
 ESEMPIO:
 0, 1, 1, 2, 3, 5, 8 il numero successivo è 13 (5+8)
 """
-a = 0
-b = 1
-
-for i in range(10):
-    a, b = b, a+b
-    print(a)
-

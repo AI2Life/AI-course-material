@@ -32,10 +32,3 @@ map = [
     ["Perugia",   "Ravenna",     "Livorno",     "Cagliari"], #6
     ["Foggia",    "Rimini" ,     "Salerno",     "Ferrara"]   #7
 ]
-
-
-a = input()
-for col in range(4):
-    for row in range(7):
-        if map[row][col] == a:
-            print(col +1 , row + 1)
