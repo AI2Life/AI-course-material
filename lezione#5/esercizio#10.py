@@ -45,22 +45,3 @@ Output: 1994
 Perchè? -> M = 1000, CM = 900, XC = 90 and IV = 4.
 """
 
-
-
-map_romans = [("I", 1), ("V", 5), ("X", 10), ("L", 50), ("C", 100), ("D", 500), ("M", 1000)]
-
-
-inpu = input()
-num = 0
-value = 0
-for letter in inpu[::-1]:
-    preValue = value
-    for el in map_romans:
-        if el[0] == letter:
-            value = el[1]
-            break
-    if value < preValue:
-        num -= value
-    else:
-        num += value
-print(num)
