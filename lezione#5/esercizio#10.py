@@ -1,7 +1,7 @@
 """
 Da numeri romani a interi
 Scrivi uno script che prende come input un numero romano e lo converte in numero intero
-
+    /q
 Simbolo   Valore
 [
 ("I",    1),
