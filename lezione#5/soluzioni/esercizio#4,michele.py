@@ -1,4 +1,5 @@
 """
+
 Scrivi uno script che prende una frase come input e conta le occorrenze di ogni parola in quella frase.
 
 Ai fini di questo esercizio si può prevedere che una parola sarà sempre una delle seguenti:
@@ -25,3 +26,34 @@ Output:
 
 
 """
+
+frase = input("Inserisci una frase: ")
+
+# separa in singoli token (parole)
+parti = frase.split()
+
+# parole contiene l'elenco delle parole, occorrenze il numero di ripetizioni
+parole =[]
+occorrenze = []
+grezze = [] # elenco di parole in forma grezza (es. "La")
+
+for p in parti:
+    # Ripulisce dai caratteri spuri
+    grezza = ""
+    for i in range(len(p)):
+        if p[i].isalnum() or (p[i] == "'" and 0 < i < len(p)-1):
+            grezza+=p[i]
+
+    pulita = grezza.lower()
+
+    if pulita in parole: # Se già incontrata incremento il contatore
+        occorrenze[parole.index(pulita)] += 1
+    else:
+        # altrimenti aggiungo la nuova parola
+        parole.append(pulita)
+        grezze.append(grezza)
+        occorrenze.append(1)
+
+for testo, volte in zip(grezze, occorrenze):
+    print(f'"{testo}" -> {volte}')
+

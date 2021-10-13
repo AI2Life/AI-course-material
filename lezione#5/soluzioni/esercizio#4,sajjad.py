@@ -1,4 +1,5 @@
 """
+
 Scrivi uno script che prende una frase come input e conta le occorrenze di ogni parola in quella frase.
 
 Ai fini di questo esercizio si può prevedere che una parola sarà sempre una delle seguenti:
@@ -25,3 +26,12 @@ Output:
 
 
 """
+
+frase = input("inserisci la frase: ")
+split = frase.split(" ")
+vuoto = []
+for parola in split:
+    if parola not in vuoto:
+        vuoto.append(parola)
+        n = split.count(parola)
+        print(f"{parola} ----> {n}")
