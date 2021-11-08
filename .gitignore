@@ -174,3 +174,6 @@ coverage.xml
 
 # Sphinx documentation
 docs/_build/
+
+#Scraper
+scraper/geckodriver
