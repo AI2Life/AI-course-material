@@ -9,13 +9,8 @@ from os import listdir
 from nltk.corpus import stopwords
 from tensorflow.keras.preprocessing.text import Tokenizer
 import numpy as np
-import keras
-import pandas as pd
 from keras.models import Sequential
 from keras.layers import Dense
-from sklearn.metrics import confusion_matrix
-import matplotlib.pyplot as plt
-import seaborn as sns
 import re
 
 #%%
@@ -135,7 +130,7 @@ n_words = X_test.shape[1]
 # architettura del modello
 model = Sequential()
 model.add(Dense(50, input_shape=(n_words,), activation='relu'))
-model.add(Dense(1, activation='heaviside'))
+model.add(Dense(1, activation='sigmoid'))
 
 # compila modello
 model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])

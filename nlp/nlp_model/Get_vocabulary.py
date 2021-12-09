@@ -56,7 +56,7 @@ def load_doc(filename):
 def clean_doc(doc):
     # dividi il testo sulla base degli spazi
     tokens = doc.split()
-    # rimuovi punteggiatura
+    # rimuovi punteggiatura e numeri
     tokens = [re.sub(r'\W+', "", i) for i in tokens]
     tokens = [re.sub(r'\d+', "", i) for i in tokens]
     # rimuovi token non composti da lettere
