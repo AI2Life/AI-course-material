@@ -9,8 +9,8 @@ from os import listdir
 from nltk.corpus import stopwords
 from tensorflow.keras.preprocessing.text import Tokenizer
 import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense
 import re
 
 #%%
@@ -20,13 +20,13 @@ import re
 
 # carica il documento
 def load_doc(filename):
-	# apri il file per la sola lettura
-	file = open(filename, 'r')
-	# leggi il testo
-	text = file.read()
-	# chiudi il file
-	file.close()
-	return text
+    # apri il file per la sola lettura
+    file = open(filename, 'r')
+    # leggi il testo
+    text = file.read()
+    # chiudi il file
+    file.close()
+    return text
 
 
 # trasforma il documento in token ripuliti
@@ -49,13 +49,13 @@ def clean_doc(doc):
 
 # carica e pulisci documento, ritornando una stringa di token
 def doc_to_line(filename, vocab):
-	# carica il documento
-	doc = load_doc(filename)
-	# trasforma il documento in token ripuliti
-	tokens = clean_doc(doc)
-	# filtra attraverso il vocabolario
-	tokens = [w for w in tokens if w in vocab]
-	return ' '.join(tokens)
+    # carica il documento
+    doc = load_doc(filename)
+    # trasforma il documento in token ripuliti
+    tokens = clean_doc(doc)
+    # filtra attraverso il vocabolario
+    tokens = [w for w in tokens if w in vocab]
+    return ' '.join(tokens)
 
 
 # carica tutti i documenti di una directory

@@ -43,13 +43,13 @@ def get_data():
 
 # carica il documento
 def load_doc(filename):
-	# apri il file per la sola lettura
-	file = open(filename, 'r')
-	# leggi il testo
-	text = file.read()
-	# chiudi il file
-	file.close()
-	return text
+    # apri il file per la sola lettura
+    file = open(filename, 'r')
+    # leggi il testo
+    text = file.read()
+    # chiudi il file
+    file.close()
+    return text
 
     
 # trasforma il documento in token ripuliti
@@ -83,24 +83,24 @@ print(tokens)
 
 # carica un documento e aggiungilo ad un vocabolario
 def add_doc_to_vocab(filename, vocab):
-	# carica il documento
-	doc = load_doc(filename)
-	# trasforma il documento in token ripuliti
-	tokens = clean_doc(doc)
-	# aggiorna il vocabolario
-	vocab.update(tokens)
+    # carica il documento
+    doc = load_doc(filename)
+    # trasforma il documento in token ripuliti
+    tokens = clean_doc(doc)
+    # aggiorna il vocabolario
+    vocab.update(tokens)
  
 # carica tutti i documenti di una directory
 def process_docs(directory, vocab):
     # itera tutti i file nella directory
-	for filename in listdir(directory):
-		# scarta il 10% dei file
-		if filename.startswith('cv9'):
-			continue
-		# crea il path del file da aprire
-		path = directory + '/' + filename
-		# aggiungi al vocabolario
-		add_doc_to_vocab(path, vocab)
+    for filename in listdir(directory):
+        # scarta il 10% dei file
+        if filename.startswith('cv9'):
+            continue
+        # crea il path del file da aprire
+        path = directory + '/' + filename
+        # aggiungi al vocabolario
+        add_doc_to_vocab(path, vocab)
         
 #%%
  
@@ -126,14 +126,14 @@ print(len(tokens))
 
 # salva vocabolario in un file di testo
 def save_list(lines, filename):
-	# converti lista in un elenco di parole
-	data = '\n'.join(lines)
-	# apri il file
-	file = open(filename, 'w')
-	# inserisci il testo
-	file.write(data)
-	# chiudi il file
-	file.close()
+    # converti lista in un elenco di parole
+    data = '\n'.join(lines)
+    # apri il file
+    file = open(filename, 'w')
+    # inserisci il testo
+    file.write(data)
+    # chiudi il file
+    file.close()
     
 #%%
  
